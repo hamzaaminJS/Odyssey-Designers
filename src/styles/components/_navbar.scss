@@ -1,0 +1,29 @@
+
+nav{
+    height: 20vh;
+    header{
+        color: rgba(255, 255, 255, 0.925);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        .nav-links{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 20%;
+            @media (max-width: 1100px) {
+                min-width: 50%;
+                gap: 2rem;
+              }
+            Link, .link{
+                color: rgba(255, 255, 255, 0.808);   
+            }
+        }
+        @media (max-width: 1500px) {
+            width: 90%;
+        }
+    }
+}

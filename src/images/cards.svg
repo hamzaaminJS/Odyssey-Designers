@@ -1,0 +1,10 @@
+<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="70" height="70" rx="13" fill="#34A56F" fill-opacity="0.1"/>
+<rect x="22.873" y="31.1934" width="30.1265" height="22.4545" rx="2" stroke="#32323F" stroke-width="2"/>
+<rect x="39.1348" y="34.269" width="8.99062" height="5.754" rx="2.877" fill="#32323F"/>
+<line x1="27.7871" y1="45.0171" x2="37.2951" y2="45.0171" stroke="#32323F" stroke-width="2" stroke-linecap="round"/>
+<line x1="27.7871" y1="48.0137" x2="37.2951" y2="48.0137" stroke="#32323F" stroke-width="2" stroke-linecap="round"/>
+<path d="M48.1261 27.458L45.4289 17.2087C45.0293 16.6892 43.9664 15.7342 42.9115 16.0699C41.8566 16.4055 25.4098 20.4054 17.3182 22.3633C16.7189 22.663 15.64 23.622 16.1195 25.0605C16.599 26.499 19.1963 37.088 20.435 42.2026" stroke="#32323F" stroke-width="2" stroke-linecap="round"/>
+<line x1="46.4469" y1="19.6783" x2="16.5981" y2="26.9907" stroke="#32323F" stroke-width="2"/>
+<line x1="26.8699" y1="27.5734" x2="21.8687" y2="28.6944" stroke="#32323F" stroke-width="2" stroke-linecap="round"/>
+</svg>
