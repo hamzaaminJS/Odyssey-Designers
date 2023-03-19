@@ -76,23 +76,6 @@ function LandingPage() {
         }
         selected.classList.remove('selected')
     }
-    const toggleDisplay = () => {
-        const popup = document.querySelector('.popup-container')
-          popup.style.display = 'flex'
-          setTimeout(() => {
-            popup.style.opacity = '1'
-          }, 1);
-    }
-
-    const timeOutPopup = () => {
-        return setTimeout(() => {
-            toggleDisplay()
-        }, 4000);
-    }
-
-    useEffect(() => {
-        timeOutPopup()
-    }, [])
 
   return (
     <div className='landing-page'>

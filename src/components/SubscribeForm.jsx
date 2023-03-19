@@ -53,7 +53,7 @@ const CustomForm = ({ status, message, onValidated }) => {
             </h3>
             <div className="bullet-points">
             <p className="paragraph-two">What You'll Get:</p>
-                <p className="paragraph-two bullet-point">From Lookers To Bookers The E-Book</p>
+                <p className="paragraph-two bullet-point">From Lookers To Bookers The E-Book <span><a  className='link' style={{textDecoration: 'underline', marginLeft: '1rem', color: '#34A56F', fontSize: '1.4rem', cursor: 'pointer', fontStyle: 'none'}} href="/e-book" target="_blank">Learn More</a></span></p>
                 <p className="paragraph-two bullet-point">Tips And Industy Updates</p>
                 <p className="paragraph-two bullet-point">Early Access To Free Products!</p>
                 <p className="paragraph-two bullet-point">No Spamming Whatsoever</p>
