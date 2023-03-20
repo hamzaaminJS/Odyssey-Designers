@@ -7,6 +7,9 @@
     font-weight: 700;
     font-size: 6.4rem;
     line-height: 129.4%;
+    @media (max-width: 550px) {
+        font-size: 5rem;
+    }
 }
 .heading-two{
     font-family: 'Montserrat';
