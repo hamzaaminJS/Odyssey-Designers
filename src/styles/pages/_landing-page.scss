@@ -338,6 +338,9 @@ footer{
     }
     
     @media screen and (max-width: 600px) {
-        height: 80vh;
+        min-height: 80vh;
+        .logo{
+            max-width: 100%;
+        }
     }
 }
