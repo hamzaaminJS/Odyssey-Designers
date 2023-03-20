@@ -24,13 +24,15 @@ function App() {
 //     timeOutPopup()
 // }, [])
   return (
-    <Router>
-      <Routes>
-        <Route path="/another" element={<Another/>}/>
-        <Route path="/" element={<LandingPage/>}/>
-        <Route path="/e-book" element={<EBook/>}/>
-      </Routes>
-    </Router>
+    <div className="App">
+      <Router>
+          <Routes>
+            <Route path="/another" element={<Another/>}/>
+            <Route path="/" element={<LandingPage/>}/>
+            <Route path="/e-book" element={<EBook/>}/>
+          </Routes>
+        </Router>
+    </div>
   );
 }
 
