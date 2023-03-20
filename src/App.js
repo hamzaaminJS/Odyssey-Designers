@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Switch, Route, Link } from 'react-router-dom';
-import Main from './pages/Main'
 import LandingPage from './pages/LandingPage';
 import EBook from './pages/EBook';
 import Another from './pages/Another';
