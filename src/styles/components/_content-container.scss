@@ -10,6 +10,7 @@
         width: 80%;
         margin: auto;
         gap: 6rem;
+        min-height: auto;
         
         .content-info-container{
             display: flex;
@@ -19,6 +20,17 @@
             gap: 3.2rem;
             width: 50%;
             overflow: hidden;
+            .review-img{
+                width: auto;
+                height: 7rem;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                img{
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
 
             @keyframes animate-opacity {
                 0% {

@@ -19,6 +19,7 @@ import More from '../images/more.svg'
 import SeaTwo from '../images/sea-two.jpg'
 import Statue from '../images/statue.png'
 import AIWebsite from '../images/ai-website.jpg'
+import Jacob from '../images/jacob.jpg'
 import Logo from '../images/logo.png'
 
 import Navbar from '../components/Navbar'
@@ -30,11 +31,11 @@ function LandingPage() {
     let [questionSelected, setQuestionSelected] = useState(0)
 
     const reviews = [
-        [`“Working with TravelUI on our project was brilliant! The team captured our vision and delivered. We could not be happier. The team were an absolute joy to work with!”`, '- Hamza'],
-        [`“Working with TravelUI on our project was brilliant! The team captured our vision and delivered. We could not be happier. The team were an absolute joy to work with! -2”`, '- Taha'],
-        [`“Working with TravelUI on our project was brilliant! The team captured our vision and delivered. We could not be happier. The team were an absolute joy to work with! -3”`, '- Omar'],
-        [`“Working with TravelUI on our project was brilliant! The team captured our vision and delivered. We could not be happier. The team were an absolute joy to work with! -4”`, '- AbdelRahman'],
-        [`“Working with TravelUI on our project was brilliant! The team captured our vision and delivered. We could not be happier. The team were an absolute joy to work with! -5”`, '- Mohamed'],
+        [`“They took the time to understand our brand and delivered a website that truly represents us. Their strategies have also helped us reach new customers and increase our sales.”`, '- Jacob'],
+        [`“Working with Odyssey Designers has been a game-changer for our business. Their team is talented, creative, and always goes above and beyond to deliver top-notch results.”`, '- Taha'],
+        [`“Their team takes the time to understand your needs and goals, and then works tirelessly to deliver results.”`, '- Omar'],
+        [`“Their attention to detail and commitment to quality is second to none. Highly recommend!”`, '- AbdelRahman'],
+        [`“ Their team is professional, knowledgeable, and easy to work with. They took the time to understand our unique needs and delivered a website that exceeded our expectations.”`, '- Mohamed'],
     ]
 
     const sendEmail = () => {
@@ -188,7 +189,7 @@ function LandingPage() {
             <div className="content-container reverse-flex">
             <div className="content-info-container">
                     <h3 className="heading-four">Our Clients' Success is Our Success.<br />Hear from Our Clients...</h3>
-                    <p className="paragraph-two slide-me">{reviews[current][0]} <br /><br />{reviews[current][1]}</p>
+                    <p className="paragraph-two slide-me">{reviews[current][0]} <br /><br />{reviews[current][1]}<br /><br /> <div className="review-img">{currentFast === 0 ? <img src={Jacob} alt="" /> : <p className='paragraph-three' style={{color: "#959595"}}>Photo Hidden Due To Privacy Policy</p>}</div> </p>
                     <div className="button-container align-start-phone">
                         <div className="switch-container">
                             <img src={SwitchLeft} alt="" className="switch-left" onClick={loop("-", 4)}/>
@@ -270,56 +271,56 @@ function LandingPage() {
             <div className="questions">
                 <div className="question">
                     <div className="question-flex">
-                    <h5 className="heading-five">What’s going on man? Tell me! How are you doing?</h5>
+                    <h5 className="heading-five">How can website design and marketing services help my business</h5>
                     <span onClick={() => setQuestionSelected(0)} className={`heading-three ${questionSelected === 0 ? 'rotate' : null}`} style={{color: "rgba(0, 0, 0, .6)", padding: "1rem", cursor: "pointer"}}>+</span>
                     </div>
                     {
                         questionSelected === 0 ?
-                        <p className="paragraph-three">We have plans for all people, from 500 to 20k, yes, some people pay 20k+ to get the most out of the online space. You also have plans for all people, from 500 to 20k, yes, some people pay 40 to get the most out of the online space..</p>
+                        <p className="paragraph-three">Website design and marketing services can help your travel business stand out from competitors by creating a unique and memorable online presence that showcases your brand and services. By using high-quality images and videos, engaging content, and user-friendly design, you can attract and retain customers, and ultimately increase bookings and revenue.</p>
                         : null
                     }
                 </div>
                 <div className="question">
                     <div className="question-flex">
-                    <h5 className="heading-five">What’s going on man? Tell me! How are you doing?</h5>
+                    <h5 className="heading-five">How long will it take to design and launch my website?</h5>
                     <span onClick={() => setQuestionSelected(1)}  className={`heading-three ${questionSelected === 1 ? 'rotate' : null}`} style={{color: "rgba(0, 0, 0, .6)", padding: "1rem", cursor: "pointer"}}>+</span>
                     </div>
                     {
                         questionSelected === 1 ?
-                        <p className="paragraph-three">We have plans for all people, from 500 to 20k, yes, some people pay 20k+ to get the most out of the online space. You also have plans for all people, from 500 to 20k, yes, some people pay 40 to get the most out of the online space..</p>
+                        <p className="paragraph-three">The timeline for designing and launching a website can vary depending on the scope and complexity of the project. Typically, it can take anywhere from just a few days to a few weeks to complete a website design project. We will be able to provide you with a clear timeline and keep you updated on the progress throughout the project.</p>
                         : null
                     }
                 </div>
                 <div className="question">
                     <div className="question-flex">
-                    <h5 className="heading-five">What’s going on man? Tell me! How are you doing?</h5>
+                    <h5 className="heading-five">What kind of marketing strategies do you use to promote my business?</h5>
                     <span onClick={() => setQuestionSelected(2)}  className={`heading-three ${questionSelected === 2 ? 'rotate' : null}`} style={{color: "rgba(0, 0, 0, .6)", padding: "1rem", cursor: "pointer"}}>+</span>
                     </div>
                     {
                         questionSelected === 2 ?
-                        <p className="paragraph-three">We have plans for all people, from 500 to 20k, yes, some people pay 20k+ to get the most out of the online space. You also have plans for all people, from 500 to 20k, yes, some people pay 40 to get the most out of the online space..</p>
+                        <p className="paragraph-three">We will provide a range of marketing strategies that are tailored to your specific business goals and target audience. This may include search engine optimization (SEO), pay-per-click (PPC) advertising, social media marketing, content marketing, email marketing, and using sales funnels to increase client value. The agency should work with you to determine the best mix of strategies that will help you achieve your goals.</p>
                         : null
                     }
                 </div>
                 <div className="question">
                     <div className="question-flex">
-                    <h5 className="heading-five">What’s going on man? Tell me! How are you doing?</h5>
+                    <h5 className="heading-five">How much will website design and marketing services cost?</h5>
                     <span onClick={() => setQuestionSelected(3)}  className={`heading-three ${questionSelected === 3 ? 'rotate' : null}`} style={{color: "rgba(0, 0, 0, .6)", padding: "1rem", cursor: "pointer"}}>+</span>
                     </div>
                     {
                         questionSelected === 3 ?
-                        <p className="paragraph-three">We have plans for all people, from 500 to 20k, yes, some people pay 20k+ to get the most out of the online space. You also have plans for all people, from 500 to 20k, yes, some people pay 40 to get the most out of the online space..</p>
+                        <p className="paragraph-three">The cost of website design and marketing services for the travel industry can vary depending on the scope of the project, the level of customization required, and the marketing strategies used. However, investing in high-quality website design and marketing services can yield significant returns in terms of increased bookings and revenue. We work with our clients to create tailored solutions that meet their needs and budget.</p>
                         : null
                     }
                 </div>
                 <div className="question">
                     <div className="question-flex">
-                    <h5 className="heading-five">What’s going on man? Tell me! How are you doing?</h5>
+                    <h5 className="heading-five">What kind of support do you provide after the website is launched?</h5>
                     <span onClick={() => setQuestionSelected(4)}  className={`heading-three ${questionSelected === 4 ? 'rotate' : null}`} style={{color: "rgba(0, 0, 0, .6)", padding: "1rem", cursor: "pointer"}}>+</span>
                     </div>
                     {
                         questionSelected === 4 ?
-                        <p className="paragraph-three">We have plans for all people, from 500 to 20k, yes, some people pay 20k+ to get the most out of the online space. You also have plans for all people, from 500 to 20k, yes, some people pay 40 to get the most out of the online space..</p>
+                        <p className="paragraph-three">After your website is launched, we provide ongoing support and marketing services to ensure that your travel business stays up-to-date, secure, and optimized for performance. Our support services include regular maintenance, updates, security patches, and backups, as well as analytics reporting to track website traffic and conversion rates. For ongoing marketing, we offer SEO, PPC advertising, social media marketing, email marketing, and content marketing tailored to your goals and budget.</p>
                         : null
                     }
                 </div>
@@ -341,16 +342,11 @@ function LandingPage() {
           
           <div className="footer-navigation">
             <div className="footer-links">
-            <Link to='/'><img src={Logo} alt="Odyssey Designers Logo" className="logo" /></Link>
+            <Link to='/'><img src={Logo} alt="Odyssey Designers Logo" className="logo" style={{maxWidth: "90%"}}/></Link>
               <div className="footer-links-column dark">
                 <h3 className="heading-five">Learn More</h3>
                 <Link to="/" className="link">Home</Link>
-                <Link to="/why-us" className="link">Why Us</Link>
-                <Link to="/why-us" className="link">Case Studies</Link>
-              </div>
-              <div className="footer-links-column">
-                <h3 className="heading-five">Copyright</h3>
-                <p className="paragraph-two">This website is made by us</p>
+                <Link to="/e-book" className="link">Scale Your Travel business with our free E-Book</Link>
               </div>
             </div>
           </div>
