@@ -92,5 +92,9 @@
                 }
             }
         }
+        
+        @media (max-width: 600px) {
+            padding: 3rem;
+        }
     }
 }
