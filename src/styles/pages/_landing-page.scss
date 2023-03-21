@@ -183,13 +183,14 @@ section.faqs{
     align-items: center;
     justify-content: start;
     padding-top: 10vh;
-    height: 100vh;
+    min-height: 100vh;
     gap: 4rem;
     text-align: center;
     flex-direction: column;
     width: 90%;
     margin: auto;
     margin-bottom: 10rem;
+    padding-bottom: 2rem;
     .questions{
         margin-top: 10rem;
         text-align: start;
