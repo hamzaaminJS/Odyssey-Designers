@@ -189,7 +189,7 @@ function LandingPage() {
             <div className="content-container reverse-flex">
             <div className="content-info-container">
                     <h3 className="heading-four">Our Clients' Success is Our Success.<br />Hear from Our Clients...</h3>
-                    <p className="paragraph-two slide-me">{reviews[current][0]} <br /><br />{reviews[current][1]}<br /><br /> <div className="review-img">{currentFast === 0 ? <img src={Jacob} alt="" /> : <p className='paragraph-three' style={{color: "#959595"}}>Photo Hidden Due To Privacy Policy</p>}</div> </p>
+                    <p className="paragraph-two slide-me">{reviews[current][0]} <br /><br />{reviews[current][1]}<br /><br /> <div className="review-img">{currentFast === 0 ? <p className='paragraph-three' style={{color: "#959595"}}>Photo Hidden Due To Privacy Policy</p> : <p className='paragraph-three' style={{color: "#959595"}}>Photo Hidden Due To Privacy Policy</p>}</div> </p>
                     <div className="button-container align-start-phone">
                         <div className="switch-container">
                             <img src={SwitchLeft} alt="" className="switch-left" onClick={loop("-", 4)}/>
