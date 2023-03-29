@@ -6,23 +6,23 @@ import Another from './pages/Another';
 
 function App() {
   
-//   const toggleDisplay = () => {
-//     const popup = document.querySelector('.popup-container')
-//       popup.style.display = 'flex'
-//       setTimeout(() => {
-//         popup.style.opacity = '1'
-//       }, 1);
-// }
+  const toggleDisplay = () => {
+    const popup = document.querySelector('.popup-container')
+      popup.style.display = 'flex'
+      setTimeout(() => {
+        popup.style.opacity = '1'
+      }, 1);
+}
 
-// const timeOutPopup = () => {
-//     return setTimeout(() => {
-//         toggleDisplay()
-//     }, 4000);
-// }
+const timeOutPopup = () => {
+    return setTimeout(() => {
+        toggleDisplay()
+    }, 4000);
+}
 
-// useEffect(() => {
-//     timeOutPopup()
-// }, [])
+useEffect(() => {
+    timeOutPopup()
+}, [])
   return (
     <div className="App">
       <Router>
