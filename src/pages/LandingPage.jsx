@@ -39,7 +39,7 @@ function LandingPage() {
     ]
 
     const sendEmail = () => {
-        window.location = "mailto:hamzawork.cs@gmail.com";
+        window.location = "mailto:odysseydesignersagency@gmail.com";
     }
 
     const loop = (type, max) => (e) => {
