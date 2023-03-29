@@ -49,7 +49,7 @@ const CustomForm = ({ status, message, onValidated }) => {
         >
             <h3 className="heading-three">
                 {status === "success" ? "Success!" :
-                    "Don't You Want To Get More Bookings? Join For Even More Free Stuff!"}
+                    "Don't You Want More Bookings? Join For Even More Free Stuff!"}
             </h3>
             <div className="bullet-points">
             <p className="paragraph-two">What You'll Get:</p>
