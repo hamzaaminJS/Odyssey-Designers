@@ -1,0 +1,109 @@
+.case-study-hero{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 8rem 0;
+    min-height: 60vh;
+    .hero-info{
+        max-width: 50rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        gap: 2.5rem;
+    }
+    .img-container{
+        width: 50%;
+        img{
+            border-radius: 25px;
+            width: 100%;
+        }
+    }
+    @media (max-width: 1100px) {
+        flex-direction: column;
+        align-items: start;
+        gap: 7rem;
+        .hero-info{
+            max-width: 60rem;
+        }
+        .img-container{
+            width: 100%;
+        }
+    }
+}
+
+.case-study-container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    video,img{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        max-width: 100%;
+        border-radius: 25px;
+    }
+    p{
+        max-width: 75rem;
+    }
+    .case-study-images{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+        img{
+            width: 33.3333%;
+            height: 50rem;
+            object-fit: cover;
+            object-position: top;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            flex-direction: column;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.display-img-container{
+    margin: auto;
+    overflow: hidden;
+    .navigate-back{
+        margin-bottom: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 1rem;
+        cursor: pointer;
+        .left-arrow {
+            filter: invert(100%);
+          }
+          .back{
+              text-decoration: underline;
+          }
+    }
+    .design-img{
+        width: 100%;
+    }
+}
+
+.space{
+    height: 15rem;
+}
+
+.overdiv{
+    transition: .4s ease-in-out;
+    overflow: hidden;
+    &:hover{
+        scale: 1.01;
+    }
+}

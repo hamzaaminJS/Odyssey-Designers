@@ -1,0 +1,72 @@
+@import '../base/variables';
+
+.contact-page{
+    height: 100vh;
+}
+.contact-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-top: 0rem;
+
+    .form{
+        width: 30rem;
+    }
+
+    .label{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    input {
+        font-family: "Poppins";
+        border: none;
+        border-bottom: 1.5px solid #e0e0e0;
+        padding: 1rem 1.6rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #dadada;
+        transition: all 0.2s ease-in-out;
+        width: 100%;
+        background-color: transparent;
+        &::placeholder {
+          font-weight: 300;
+          color: #bdbdbd;
+        }
+        &:focus {
+          outline: none;
+          border-color: $secondary-color;
+        }
+      }
+      
+      /* For textareas */
+      textarea {
+        font-family: "Poppins";
+        border: none;
+        border-bottom: 1.5px solid #e0e0e0;
+        padding: 1rem 1.6rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #dadada;
+        transition: all 0.2s ease-in-out;
+        width: 100%;
+        min-height: 20rem;
+        background-color: transparent;
+        &::placeholder {
+          font-weight: 300;
+          color: #bdbdbd;
+        }
+        &:focus {
+          outline: none;
+          border-color: $secondary-color;
+        }
+      }   
+}
+  

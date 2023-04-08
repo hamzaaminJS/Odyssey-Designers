@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import RightArrow from '../images/green-arrow.svg'
 import PCMobile from '../images/computer-mobile.svg'
 import PC from '../images/computer.svg'
@@ -17,15 +17,17 @@ import ThumbsUp from '../images/thumbs-up.svg'
 import Website from '../images/website.svg'
 import More from '../images/more.svg'
 import SeaTwo from '../images/sea-two.jpg'
-import Statue from '../images/statue.png'
 import AIWebsite from '../images/ai-website.jpg'
 import Jacob from '../images/jacob.jpg'
 import Logo from '../images/logo.png'
 
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import SubscribeForm from '../components/SubscribeForm'
 
 function LandingPage() {
+    const navigate = useNavigate()
+
     let [current, setCurrent] = useState(0)
     let [currentFast, setCurrentFast] = useState(0)
     let [questionSelected, setQuestionSelected] = useState(0)
@@ -39,7 +41,8 @@ function LandingPage() {
     ]
 
     const sendEmail = () => {
-        window.location = "mailto:odysseydesignersagency@gmail.com";
+        // window.location = "mailto:odysseydesignersagency@gmail.com";
+        navigate('/contact')
     }
 
     const loop = (type, max) => (e) => {
@@ -326,32 +329,7 @@ function LandingPage() {
                 </div>
             </div>
         </section>
-        <footer className='dark'>
-        <div className="footer-container white-text">
-          <div className="footer-cta">
-            <div className="cta">
-              <h3 className="heading-one">Intrested? <br /> Contact Us!</h3>
-              <p className="paragraph-one">Click contact now to email us, it's free! We'll get back to you as soon as we see it.</p>
-
-            <button className="main-button"  onClick={sendEmail}>
-                Contact Us
-            </button>
-            </div>
-            <div className="statue-container"><img src={Statue} alt="" className='footer-img' /></div>
-          </div>
-          
-          <div className="footer-navigation">
-            <div className="footer-links">
-            <Link to='/'><img src={Logo} alt="Odyssey Designers Logo" className="logo" style={{maxWidth: "90%"}}/></Link>
-              <div className="footer-links-column dark">
-                <h3 className="heading-five">Learn More</h3>
-                <Link to="/" className="link">Home</Link>
-                <Link to="/e-book" className="link">Scale Your Travel business with our free E-Book</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+        <Footer/>
     </div>
   )
 }

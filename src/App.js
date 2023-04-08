@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Switch, Route, Link } from 'react-rout
 import LandingPage from './pages/LandingPage';
 import EBook from './pages/EBook';
 import Another from './pages/Another';
+import Contact from './pages/Contact';
+import CaseStudy from './pages/CaseStudy';
 
 function App() {
   
@@ -20,9 +22,9 @@ const timeOutPopup = () => {
     }, 4000);
 }
 
-useEffect(() => {
-    timeOutPopup()
-}, [])
+// useEffect(() => {
+//     timeOutPopup()
+// }, [])
   return (
     <div className="App">
       <Router>
@@ -30,6 +32,8 @@ useEffect(() => {
             <Route path="/another" element={<Another/>}/>
             <Route path="/" element={<LandingPage/>}/>
             <Route path="/e-book" element={<EBook/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+            <Route path="/latest-project" element={<CaseStudy/>}/>
           </Routes>
         </Router>
     </div>
