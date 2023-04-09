@@ -53,7 +53,7 @@ function CaseStudy() {
                     Icelnad Expeditions - Travel Agency
                 </p>
                 <p className="paragraph-two">
-                A comprehensive ebook of only 30 pages of pure information on how to increase sales for your travel business by optimizing your online presence.
+                Iceland Expeditions is a leading travel agency that offers a wide range of tours, car rentals, and accommodation options for travelers looking to explore the natural beauty of Iceland.
                 </p>
                 <div className="button-container">
                     <button className="secondary-button" onClick={() => window.open("https://iceland-expeditions.onrender.com", '_blank')}>
