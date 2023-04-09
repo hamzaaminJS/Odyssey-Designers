@@ -13,6 +13,11 @@
         align-items: start;
         justify-content: space-between;
         gap: 2.5rem;
+        @media (max-width: 480px) {
+            .green-link-container{
+                display: none;
+            }
+        }
     }
     .img-container{
         width: 50%;
