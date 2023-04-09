@@ -10,6 +10,8 @@ import IcelandToursFull from '../images/iceland-tours-full.jpg'
 import RightArrow from '../images/green-arrow.svg'
 import { useState, useEffect } from 'react'
 import {Link, useNavigate} from 'react-router-dom'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function CaseStudy() {
     const [imgOpen, setImgOpen] = useState(false)
@@ -20,6 +22,10 @@ function CaseStudy() {
             behavior: 'smooth'
           });
     }, [imgOpen])
+
+    useEffect(() => {
+        AOS.init({duration: 1000, delay: 100})
+      })
 
     if(imgOpen) {
         return (
@@ -73,28 +79,28 @@ function CaseStudy() {
         <div className="case-study-container responsive-width">
             <h3 className="heading-two">Project Overview</h3>
             <p className="paragraph-two">Iceland Expeditions is a travel agency in Iceland that needed a modern and user-friendly website to showcase their tours, car rentals, and accommodation options. </p>
-            <video muted autoPlay loop>
+            <video muted autoPlay loop  data-aos="fade-up">
                 <source src={TransitionsVideo} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </div>
         <div className="case-study-container responsive-width">
-            <h3 className="heading-two">Features and Functionalities of The Project</h3>
-            <p className="paragraph-two">The Iceland Expeditions project offers a wide range of tours, car rentals, and accommodation options, all of which needed to be presented in a comprehensive and accessible way. To achieve this goal, we implemented various features and functionalities that enabled clients to easily browse, book, and pay for their desired services.</p>
+            <h3 className="heading-two" data-aos="fade-up">Features and Functionalities of The Project</h3>
+            <p className="paragraph-two" data-aos="fade-up">The Iceland Expeditions project offers a wide range of tours, car rentals, and accommodation options, all of which needed to be presented in a comprehensive and accessible way. To achieve this goal, we implemented various features and functionalities that enabled clients to easily browse, book, and pay for their desired services.</p>
             <div className="bullet-points">
-                <p className="paragraph-two bullet-point">Comprehensive showcase of all tours, car rentals, and accommodation options offered by Iceland Expeditions</p>
-                <p className="paragraph-two bullet-point">Availability calendar allowing clients to check for available dates</p>
-                <p className="paragraph-two bullet-point">Online booking system enabling clients to easily book their desired tours, rentals, or accommodations</p>
-                <p className="paragraph-two bullet-point">Secure online payment system ensuring client transactions are safe and protected</p>
-                <p className="paragraph-two bullet-point">User-friendly website design and layout that reduces the need for phone calls by presenting all necessary information and details in an easily accessible manner</p>
-                <p className="paragraph-two bullet-point">Establishment of trust and credibility through a strong connection with the viewer, with features such as captivating images, detailed descriptions, and user reviews.</p>
+                <p className="paragraph-two bullet-point" data-aos="fade-up">Comprehensive showcase of all tours, car rentals, and accommodation options offered by Iceland Expeditions</p>
+                <p className="paragraph-two bullet-point" data-aos="fade-up">Availability calendar allowing clients to check for available dates</p>
+                <p className="paragraph-two bullet-point" data-aos="fade-up">Online booking system enabling clients to easily book their desired tours, rentals, or accommodations</p>
+                <p className="paragraph-two bullet-point" data-aos="fade-up">Secure online payment system ensuring client transactions are safe and protected</p>
+                <p className="paragraph-two bullet-point" data-aos="fade-up">User-friendly website design and layout that reduces the need for phone calls by presenting all necessary information and details in an easily accessible manner</p>
+                <p className="paragraph-two bullet-point" data-aos="fade-up">Establishment of trust and credibility through a strong connection with the viewer, with features such as captivating images, detailed descriptions, and user reviews.</p>
             </div>
-            <img src={IcelandAboutUs} alt="" />
+            <img src={IcelandAboutUs} alt=""  data-aos="fade-up"/>
         </div>
         <div className="case-study-container responsive-width">
-            <h3 className="heading-two">The Design</h3>
-            <p className="paragraph-two">Iceland Expeditions is a travel agency in Iceland that needed a modern and user-friendly website to showcase their tours, car rentals, and accommodation options. </p>
-            <div className="case-study-images">
+            <h3 className="heading-two" data-aos="fade-up">The Design</h3>
+            <p className="paragraph-two" data-aos="fade-up">Iceland Expeditions is a travel agency in Iceland that needed a modern and user-friendly website to showcase their tours, car rentals, and accommodation options. </p>
+            <div className="case-study-images" data-aos="fade-up">
                 <img src={IcelandLandingPageFull} onClick={() => setImgOpen(IcelandLandingPageFull)} alt="" className="overdiv" />
                 <img src={IcelandToursFull} onClick={() => setImgOpen(IcelandToursFull)} alt="" className="overdiv" />
                 <img src={IcelandAboutUsFull} onClick={() => setImgOpen(IcelandAboutUsFull)} alt="" className="overdiv" />

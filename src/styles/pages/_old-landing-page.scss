@@ -1,11 +1,10 @@
 .hero-section{
-    // background-image: url('../../images/background.jpg');
-    // min-height: 100vh;
-    padding: 0rem 0rem 5rem 0rem;
+    background-image: url('../../images/background.jpg');
+    min-height: 100vh;
     main{
         width: 80%;
         margin: auto;
-        margin-top: 2vh;
+        margin-top: 8vh;
         @media (max-width: 750px) {
             margin-top: 2rem;
           }
@@ -28,22 +27,17 @@
                 margin-bottom: 1rem;
             }
             @media (max-width: 750px) {
-            //     align-items: center;
-            //     text-align: center;
+                align-items: center;
+                text-align: center;
                 gap: 4rem;
                 max-width: 100%;
-                height: fit-content;
-                margin: 10rem 0;
+                height: 80vh;
                 p{
                     max-width: 100%;
                     margin-bottom: 1rem;
                 }
               }
         }
-    }
-
-    @media (max-width: 750px) {
-        height: fit-content;
     }
 }
 

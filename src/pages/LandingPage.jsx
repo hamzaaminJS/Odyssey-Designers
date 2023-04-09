@@ -1,5 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import {Link, useNavigate} from 'react-router-dom'
+import {Link as scrollLink, animateScroll as scroll } from "react-scroll";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import RightArrow from '../images/green-arrow.svg'
 import PCMobile from '../images/computer-mobile.svg'
 import PC from '../images/computer.svg'
@@ -28,6 +31,7 @@ import SubscribeForm from '../components/SubscribeForm'
 function LandingPage() {
     const navigate = useNavigate()
 
+    const traceRef = useRef(null);
     let [current, setCurrent] = useState(0)
     let [currentFast, setCurrentFast] = useState(0)
     let [questionSelected, setQuestionSelected] = useState(0)
@@ -81,6 +85,10 @@ function LandingPage() {
         selected.classList.remove('selected')
     }
 
+    useEffect(() => {
+        AOS.init({duration: 1000, delay: 100})
+      })
+
   return (
     <div className='landing-page'>
     <SubscribeForm/>
@@ -92,7 +100,7 @@ function LandingPage() {
                     <p className="paragraph-one">Drive More Bookings and Boost Your Online Presence with a Customized Website That Showcases Your Unique Offerings And Captivates Potential Customers.</p>
                     <div className="button-container">
                         <button className="main-button"  onClick={sendEmail}>Get Started</button>
-                        <div className="green-link-container" onClick={() => window.scrollTo({top:1000, behavior: 'smooth'})}>
+                        <div className="green-link-container" onClick={() => window.scrollTo({top:800, behavior: 'smooth'})}>
                             <Link className='link'>See How It's Done</Link>
                             <img src={RightArrow} alt="" />
                         </div>
@@ -101,32 +109,32 @@ function LandingPage() {
             </main>
         </div>
         <div className="services-section">
-            <div className="services-container">
+            <div className="services-container" data-aos="fade-up">
                 <h2 className="heading-two">We Grow Your Business. You Grow Our Reputation.</h2>
                 <p className="paragraph-one">Drive Results with Our Proven Approach to Web Design for the Travel Industry</p>
                 <div className="service-icon-container">
-                    <div className="center-icon-container">
+                    <div className="center-icon-container" data-aos="fade-up">
                         <img src={Money} alt="Website Development" />
                         <h3 className="heading-five">More Leads, More Sales</h3>
                         <p className="paragraph-two">Get a website designed to convert visitors into paying customers. With user-friendly experiences and optimized lead capture forms, you'll see an increase in leads and sales without any extra effort.</p>
                     </div>
-                    <div className="center-icon-container">
+                    <div className="center-icon-container" data-aos="fade-up">
                         <img src={More} alt="Mobile Responsive" />
                         <h3 className="heading-five">Less Work, More Results</h3>
                         <p className="paragraph-two">Let us handle everything from website design to optimization and advertising for continuous growth and results.</p>
                     </div>
-                    <div className="center-icon-container">
+                    <div className="center-icon-container" data-aos="fade-up">
                         <img src={PC} alt="Brand Identity" />
                         <h3 className="heading-five">Ongoing Optimization and Advertising</h3>
                         <p className="paragraph-two">Keep your website up-to-date and competitive with ongoing optimization and advertising services.</p>
                     </div>
-                    <div className="center-icon-container">
+                    <div className="center-icon-container" data-aos="fade-up">
                         <img src={DesignCube} alt="Website Design" />
                         <h3 className="heading-five">Website Design</h3>
                         <p className="paragraph-two">Get a professional and tailored website design that makes a great first impression and engages visitors.</p>
                     </div>
                 </div>
-                <div className="button-container">
+                <div className="button-container" data-aos="fade-up">
                         <button className="main-button"  onClick={sendEmail}>Get Started</button>
                         <div className="green-link-container">
                             <Link className='link' to='e-book'>FREE E-Book</Link>
@@ -138,16 +146,16 @@ function LandingPage() {
         <div className="content-section dark">
             <div className="content-container">
                 <div className="content-info-container">
-                    <h3 className="heading-three">No Matter How Big Your Business, You'll Find Your Solution Here</h3>
-                    <p className="paragraph-two">At Odyssey Designers, we take a results-focused approach where we prioritize your needs and goals. Our team is dedicated to delivering measurable results to help you achieve success in your online presence.</p>
+                    <h3 className="heading-three" data-aos="fade-up">No Matter How Big Your Business, You'll Find Your Solution Here</h3>
+                    <p className="paragraph-two" data-aos="fade-up">At Odyssey Designers, we take a results-focused approach where we prioritize your needs and goals. Our team is dedicated to delivering measurable results to help you achieve success in your online presence.</p>
                     <div className="bullet-points">
-                        <p className="paragraph-two bullet-point">Custom Web Design: Professional, branded design optimized for leads.</p>
-                        <p className="paragraph-two bullet-point">Boost Sales/Bookings</p>
-                        <p className="paragraph-two bullet-point">Increase Leads</p>
-                        <p className="paragraph-two bullet-point">Build Your Brand</p>
-                        <p className="paragraph-two bullet-point">Hassle-Free Hosting and Domain Registration</p>
+                        <p className="paragraph-two bullet-point" data-aos="fade-up">Custom Web Design: Professional, branded design optimized for leads.</p>
+                        <p className="paragraph-two bullet-point" data-aos="fade-up">Boost Sales/Bookings</p>
+                        <p className="paragraph-two bullet-point" data-aos="fade-up">Increase Leads</p>
+                        <p className="paragraph-two bullet-point" data-aos="fade-up">Build Your Brand</p>
+                        <p className="paragraph-two bullet-point" data-aos="fade-up">Hassle-Free Hosting and Domain Registration</p>
                     </div>
-                    <div className="button-container align-start-phone">
+                    <div className="button-container align-start-phone" data-aos="fade-up">
                         <button className="secondary-button" onClick={sendEmail}>Get In Touch</button>
                         <div className="green-link-container">
                             <Link className="link" to='/e-book'>Get Your Free E-Book</Link>
@@ -156,31 +164,31 @@ function LandingPage() {
                     </div>
                 </div>
                 <div className="content-img-container">
-                    <img src={SeaTwo} alt="" />
+                    <img src={SeaTwo} alt=""  data-aos="fade-up"/>
                 </div>
             </div>
         </div>
         <div className="options-section">
-            <h3 className="heading-two">We Have It All.<br />So Choose Wisely.</h3>
-            <p className="paragraph-one">Choose what’s best for you, we offer everything from redesigning, to custom website integration with advanced features such as online booking.</p>
+            <h3 className="heading-two" data-aos="fade-up">We Have It All.<br />So Choose Wisely.</h3>
+            <p className="paragraph-one" data-aos="fade-up">Choose what’s best for you, we offer everything from redesigning, to custom website integration with advanced features such as online booking.</p>
             <div className="options-container">
-                <div className="option center-icon-container" onClick={selectOption}>
+                <div className="option center-icon-container" data-aos="fade-up" onClick={selectOption}>
                     <img src={Line} alt="1D" />
                     <h5 className="heading-five">One Dimensional</h5>
                     <p className="paragraph-two">If you need a website to show clients your work, reviews, contact info and build a brand online. You don’t need more than that.</p>
                 </div>
-                <div className="option center-icon-container selected" onClick={selectOption}>
+                <div className="option center-icon-container selected" data-aos="fade-up" onClick={selectOption}>
                     <img src={Square} alt="2D" />
                     <h5 className="heading-five">Two Dimensional</h5>
                     <p className="paragraph-two">If you want clients to be able to see available places, book online, pay online and more, this is for you! Start now and contact our team.</p>
                 </div>
-                <div className="option center-icon-container" onClick={selectOption}>
+                <div className="option center-icon-container" data-aos="fade-up" onClick={selectOption}>
                     <img src={Cube} alt="3D" />
                     <h5 className="heading-five">Three Dimensional</h5>
                     <p className="paragraph-two">This is for high level travel agencies looking to go online. Whether you have a website or not, this will transform your online presence.</p>
                 </div>
             </div>
-            <div className="button-container">
+            <div className="button-container" data-aos="fade-up">
                 <button className="main-button"  onClick={sendEmail}>Get Started</button>
                 <div className="green-link-container">
                     <Link className="link" to='e-book'>FREE E-Book</Link>
@@ -191,14 +199,14 @@ function LandingPage() {
         <div className="content-section dark">
             <div className="content-container reverse-flex">
             <div className="content-info-container">
-                    <h3 className="heading-four">Our Clients' Success is Our Success.<br />Hear from Our Clients...</h3>
-                    <p className="paragraph-two slide-me">{reviews[current][0]} <br /><br />{reviews[current][1]}<br /><br /> <div className="review-img">{currentFast === 0 ? <p className='paragraph-three' style={{color: "#959595"}}>Photo Hidden Due To Privacy Policy</p> : <p className='paragraph-three' style={{color: "#959595"}}>Photo Hidden Due To Privacy Policy</p>}</div> </p>
-                    <div className="button-container align-start-phone">
-                        <div className="switch-container">
+                    <h3 className="heading-four" data-aos="fade-up">Our Clients' Success is Our Success.<br />Hear from Our Clients...</h3>
+                    <p className="paragraph-two slide-me" data-aos="fade-up">{reviews[current][0]} <br /><br />{reviews[current][1]}<br /><br /> <div className="review-img">{currentFast === 0 ? <p className='paragraph-three' style={{color: "#959595"}}>Photo Hidden Due To Privacy Policy</p> : <p className='paragraph-three' style={{color: "#959595"}}>Photo Hidden Due To Privacy Policy</p>}</div> </p>
+                    <div className="button-container align-start-phone" data-aos="fade-up">
+                        <div className="switch-container" data-aos="fade-up">
                             <img src={SwitchLeft} alt="" className="switch-left" onClick={loop("-", 4)}/>
                             <img src={SwitchRight} alt="" className="switch-right" onClick={loop("+", 4)} />
                         </div>
-                        <div className="which-one-container">
+                        <div className="which-one-container" data-aos="fade-up">
                             <div className={`circle ${currentFast === 0 ? 'green' : ''}`} onClick={loop(0, 4)}></div>
                             <div className={`circle ${currentFast === 1 ? 'green' : ''}`} onClick={loop(1, 4)}></div>
                             <div className={`circle ${currentFast === 2 ? 'green' : ''}`} onClick={loop(2, 4)}></div>
@@ -208,15 +216,15 @@ function LandingPage() {
                     </div>
                 </div>
                 <div className="content-img-container">
-                    <img src={AIWebsite} alt="" />
+                    <img src={AIWebsite} alt="" data-aos="fade-up"/>
                 </div>
             </div>
         </div>
         <section className="doubts-section">
             <div className="doubts-section-info">
-                <h4 className="heading-two">Avoid These Common Pitfalls.</h4>
-                <p className="paragraph-one">Clearing Up Misconceptions About Working With Odyssey Designers</p>
-                <div className="button-container pc-buttons">
+                <h4 className="heading-two" data-aos="fade-up">Avoid These Common Pitfalls.</h4>
+                <p className="paragraph-one" data-aos="fade-up">Clearing Up Misconceptions About Working With Odyssey Designers</p>
+                <div className="button-container pc-buttons" data-aos="fade-up">
                     <button className="main-button"  onClick={sendEmail}>Get Started</button>
                     <div className="green-link-container">
                         <Link className="link" to='e-book'>FREE E-Book</Link>
@@ -225,22 +233,22 @@ function LandingPage() {
                 </div>
             </div>
             <div className="doubts-section-icons">
-                <div className="center-icon-container start">
+                <div className="center-icon-container start" data-aos="fade-up">
                     <img src={Website} alt="Website Development" />
                     <h3 className="heading-five">“I Have a Website”</h3>
                     <p className="paragraph-two">Don't settle for just a "website" - invest in business growth with us.</p>
                 </div>
-                <div className="center-icon-container start">
+                <div className="center-icon-container start" data-aos="fade-up">
                     <img src={Cards} alt="Website Development" />
                     <h3 className="heading-five">“Why Even Invest In That”</h3>
                     <p className="paragraph-two">Because this will help you make more money than ever. Investing in your business is always a smart move.</p>
                 </div>
-                <div className="center-icon-container start">
+                <div className="center-icon-container start" data-aos="fade-up">
                     <img src={Money} alt="Website Development" />
                     <h3 className="heading-five">“I Can’t Afford It”</h3>
                     <p className="paragraph-two">We have plans for all people, from 500 to 20k, yes, some people pay 20k+ to get the most out of the online space.</p>
                 </div>
-                <div className="center-icon-container start">
+                <div className="center-icon-container start" data-aos="fade-up">
                     <img src={ThumbsUp} alt="Website Development" />
                     <h3 className="heading-five">“My Website Is Working Well.”</h3>
                     <p className="paragraph-two">Let us show you how it can work even better.</p>
@@ -255,12 +263,12 @@ function LandingPage() {
             </div>
         </section>
         <section className="last-chance dark">
-            <h3 className="heading-one">
+            <h3 className="heading-one" data-aos="fade-up">
                 What Are You Waiting For? <br />
                 Tell Us All That Is In Your Mind.
             </h3>
-            <p className="paragraph-one">Whatever is going on in you mind right now, ask us! We'll respond as fast as we can</p>
-            <div className="button-container phone-buttons">
+            <p className="paragraph-one" data-aos="fade-up">Whatever is going on in you mind right now, ask us! We'll respond as fast as we can</p>
+            <div className="button-container phone-buttons" data-aos="fade-up">
                 <button className="main-button"  onClick={sendEmail}>Get Started</button>
                     <div className="green-link-container">
                         <Link className="link" to='e-book'>FREE E-Book</Link>
