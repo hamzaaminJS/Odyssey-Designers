@@ -3,6 +3,7 @@
     // min-height: 100vh;
     padding: 0rem 0rem 5rem 0rem;
     main{
+        
         width: 80%;
         margin: auto;
         margin-top: 2vh;
@@ -33,12 +34,18 @@
                 gap: 4rem;
                 max-width: 100%;
                 height: fit-content;
-                margin: 10rem 0;
+                margin: 5rem 0;
                 p{
                     max-width: 100%;
                     margin-bottom: 1rem;
                 }
               }
+            @media (max-width: 480px) {
+                .green-link-container{
+                    display: none;
+                }
+            }
+              
         }
     }
 

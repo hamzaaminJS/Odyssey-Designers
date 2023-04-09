@@ -86,7 +86,7 @@ function LandingPage() {
     }
 
     useEffect(() => {
-        AOS.init({duration: 1000, delay: 100})
+        AOS.init({duration: 1000, delay: 100, offset: 50})
       })
 
   return (
