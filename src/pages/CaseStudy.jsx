@@ -56,13 +56,13 @@ function CaseStudy() {
                 A comprehensive ebook of only 30 pages of pure information on how to increase sales for your travel business by optimizing your online presence.
                 </p>
                 <div className="button-container">
-                    <button className="secondary-button"  onClick={() => window.scrollTo({top:800, behavior: 'smooth'})}>
-                        Learn More
+                    <button className="secondary-button" onClick={() => window.open("https://iceland-expeditions.onrender.com", '_blank')}>
+                        Visit Website
                     </button>
-                    {/* <div className="green-link-container" onClick={() => window.open("https://www.odysseydesigners.com", '_blank')}>
-                        <Link className='link'>Visit Website</Link>
+                    <div className="green-link-container"  onClick={() => window.scrollTo({top:800, behavior: 'smooth'})} >
+                        <Link className='link'>Learn More</Link>
                         <img src={RightArrow} alt="" />
-                    </div> */}
+                    </div>
                 </div>
             </div>
             <div className="img-container">
