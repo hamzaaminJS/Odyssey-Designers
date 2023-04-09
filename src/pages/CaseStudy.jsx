@@ -96,8 +96,8 @@ function CaseStudy() {
             <p className="paragraph-two">Iceland Expeditions is a travel agency in Iceland that needed a modern and user-friendly website to showcase their tours, car rentals, and accommodation options. </p>
             <div className="case-study-images">
                 <img src={IcelandLandingPageFull} onClick={() => setImgOpen(IcelandLandingPageFull)} alt="" className="overdiv" />
-                <img src={IcelandToursFull} onClick={() => setImgOpen(IcelandLandingPageFull)} alt="" className="overdiv" />
-                <img src={IcelandAboutUsFull} onClick={() => setImgOpen(IcelandLandingPageFull)} alt="" className="overdiv" />
+                <img src={IcelandToursFull} onClick={() => setImgOpen(IcelandToursFull)} alt="" className="overdiv" />
+                <img src={IcelandAboutUsFull} onClick={() => setImgOpen(IcelandAboutUsFull)} alt="" className="overdiv" />
             </div>
         </div>
         <div className="space"></div>
