@@ -109,9 +109,9 @@ function LandingPage() {
             </main>
         </div>
         <div className="services-section">
-            <div className="services-container" data-aos="fade-up">
+            <div className="services-container">
                 <h2 className="heading-two">We Grow Your Business. You Grow Our Reputation.</h2>
-                <p className="paragraph-one">Drive Results with Our Proven Approach to Web Design for the Travel Industry</p>
+                <p className="paragraph-one" data-aos="fade-up">Drive Results with Our Proven Approach to Web Design for the Travel Industry</p>
                 <div className="service-icon-container">
                     <div className="center-icon-container" data-aos="fade-up">
                         <img src={Money} alt="Website Development" />
